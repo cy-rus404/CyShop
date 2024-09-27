@@ -1,5 +1,5 @@
 import { StyleSheet ,View, Image } from "react-native";
-import Icon from "./assets/shopping-cart.mp4";
+import Icon from "./assets/shopping-cart.png";
 
 export default function SplashScreen(){
     return(
@@ -17,10 +17,10 @@ const styles=StyleSheet.create(
             flex:1,
             justifyContent: "center",
             alignItems:'center',
-            backgroundColor: "#1E1E1E"
+            backgroundColor: "#fff"
         },
         Image:{
-            width:270,
+            width:100,
             height:100,
             resizeMode: "cover",
         }
