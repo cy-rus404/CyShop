@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Pressable, SafeAreaView, TouchableOpacity } from "react-native";
+import { Pressable, Modal, TouchableOpacity } from "react-native";
 import {
   ActivityIndicator,
   KeyboardAvoidingView,
@@ -210,7 +210,7 @@ const HomeScreen = () => {
         We saved these for you
       </Text>
       <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
-        <Pressable style={{ width: 150, height: 150, marginLeft: 20 }}>
+        <TouchableOpacity onPress={()=> setModalVisible(true)} style={{ width: 150, height: 150, marginLeft: 20 }}>
           <Image
             style={{
               width: 170,
@@ -220,6 +220,19 @@ const HomeScreen = () => {
             }}
             source={require("./assets/airfoce.png")}
           />
+          <Modal
+        animationType="slide"
+        transparent={false}
+        visible={modalVisible}
+        onRequestClose={() => setModalVisible(true)} // Close modal on back button press
+      >
+        <TouchableOpacity
+              
+              onPress={() => setModalVisible(false)}
+            >
+              <Text style={{marginTop:50}}>Close</Text></TouchableOpacity>
+      </Modal>
+      
           <Text
             style={{
               fontSize: 20,
@@ -233,7 +246,7 @@ const HomeScreen = () => {
           <Text style={{ textAlign: "center", fontWeight: "bold" }}>
             $129.99
           </Text>
-        </Pressable>
+        </TouchableOpacity>
         <Pressable style={{ width: 150, height: 150, marginRight: 20 }}>
           <Image
             style={{
