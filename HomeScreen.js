@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { TouchableOpacity } from "react-native";
+import { Pressable, TouchableOpacity } from "react-native";
 import {
   ActivityIndicator,
   KeyboardAvoidingView,
@@ -63,13 +63,13 @@ const HomeScreen = () => {
       </KeyboardAvoidingView>
       <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
       <TouchableOpacity style={{width:80,height:80,backgroundColor:'#FFC300',marginLeft:10,borderRadius:10}}>
-        <Image source={require('./assets/shop.png')} style={{width:50,height:50, alignSelf:'center',marginTop:10}} />
+        <Image source={require('./assets/adidas.png')} style={{width:70,height:50, alignSelf:'center',marginTop:10}} />
       </TouchableOpacity>
       <TouchableOpacity style={{width:80,height:80,backgroundColor:'#FFC300',marginLeft:10,borderRadius:10}}>
-        <Image source={require('./assets/whatsapp.png')} style={{width:50,height:50, alignSelf:'center',marginTop:10}} />
+        <Image source={require('./assets/nike.png')} style={{width:74,height:40, alignSelf:'center',marginTop:20}} />
       </TouchableOpacity>
       <TouchableOpacity style={{width:80,height:80,backgroundColor:'#FFC300',marginLeft:10,borderRadius:10}}>
-        <Image source={require('./assets/fire.png')} style={{width:50,height:50, alignSelf:'center',marginTop:10}} />
+        <Image source={require('./assets/vans.png')} style={{width:50,height:50, alignSelf:'center',marginTop:10}} />
       </TouchableOpacity>
       <TouchableOpacity style={{width:80,height:80,backgroundColor:'#FFC300',marginLeft:10,borderRadius:10}}>
         <Image source={require('./assets/sales.png')} style={{width:50,height:50, alignSelf:'center',marginTop:10}} />
@@ -83,8 +83,35 @@ const HomeScreen = () => {
       <TouchableOpacity style={{width:80,height:80,backgroundColor:'#FFC300',marginLeft:10,borderRadius:10}}>
         <Image source={require('./assets/board.png')} style={{width:50,height:50, alignSelf:'center',marginTop:10}} />
       </TouchableOpacity>
-
     </ScrollView>
+    <Text style={{ margin:20,fontFamily:'geeza pro'}}>We saved these for you</Text>
+    <View style={{flexDirection:'row', justifyContent:'space-between'}}>
+    <Pressable style={{width:150,height:150,marginLeft:20}}>
+      <Image style={{width:170, height:80,alignSelf:'center',marginTop:30}} source={require('./assets/airfoce.png')}/>
+      <Text style={{fontSize:20,fontWeight:'bold',textAlign:'center',marginTop:5}}>Nike Airforce</Text>
+      <Text style={{textAlign:'center',fontWeight:'bold'}}>$129.99</Text>
+    </Pressable>
+    <Pressable style={{width:150,height:150,marginRight:20}}>
+    <Image style={{width:170, height:80,alignSelf:'center',marginTop:30}} source={require('./assets/airmax.png')}/>
+    <Text style={{fontSize:20,fontWeight:'bold',textAlign:'center',marginTop:5}}>Nike AirMax</Text>
+      <Text style={{textAlign:'center',fontWeight:'bold'}}>$229.99</Text>
+    </Pressable>
+
+    </View>
+    <View style={{flexDirection:'row', justifyContent:'space-between'}}>
+    <Pressable style={{width:150,height:150,marginLeft:20}}>
+      <Image style={{width:170, height:80,alignSelf:'center',marginTop:30}} source={require('./assets/air.png')}/>
+      <Text style={{fontSize:20,fontWeight:'bold',textAlign:'center',marginTop:5}}>Nike Lowdunks</Text>
+      <Text style={{textAlign:'center',fontWeight:'bold'}}>$449.99</Text>
+    </Pressable>
+    <Pressable style={{width:150,height:150,marginRight:20}}>
+    <Image style={{width:170, height:80,alignSelf:'center',marginTop:30}} source={require('./assets/gazelle.png')}/>
+    <Text style={{fontSize:20,fontWeight:'bold',textAlign:'center',marginTop:5}}>Nike Gazelle</Text>
+      <Text style={{textAlign:'center',fontWeight:'bold'}}>$159.99</Text>
+    </Pressable>
+
+    </View>
+
     </ScrollView>
   );
 };
