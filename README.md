@@ -1,4 +1,4 @@
-# Shoe Store App
+#  CyShop
 
 A simple mobile application built with React Native to browse, search, and purchase shoes from a curated list of products.
 
