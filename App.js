@@ -6,7 +6,7 @@ import HomeScreen from './HomeScreen';
 import { useEffect, useState } from 'react';
 
 export default function App(){
-const [isShowSplash, setIsShowSplash] = useState(false);
+const [isShowSplash, setIsShowSplash] = useState(true);
 
 useEffect(()=>{
   setTimeout(()=>{
