@@ -84,7 +84,7 @@ const HomeScreen = () => {
         <Image source={require('./assets/board.png')} style={{width:50,height:50, alignSelf:'center',marginTop:10}} />
       </TouchableOpacity>
     </ScrollView>
-    <Text style={{ margin:20,fontFamily:'geeza pro'}}>We saved these for you</Text>
+    <Text style={{ margin:20,fontFamily:'geeza pro',textAlign:'center',fontSize:17,fontWeight:'bold'}}>We saved these for you</Text>
     <View style={{flexDirection:'row', justifyContent:'space-between'}}>
     <Pressable style={{width:150,height:150,marginLeft:20}}>
       <Image style={{width:170, height:80,alignSelf:'center',marginTop:30}} source={require('./assets/airfoce.png')}/>
@@ -110,6 +110,13 @@ const HomeScreen = () => {
       <Text style={{textAlign:'center',fontWeight:'bold'}}>$159.99</Text>
     </Pressable>
 
+    </View>
+
+    <View style={{marginTop:20}}>
+    <ImageBackground style={{width:'100%',height:120}} source={require('./assets/banner.jpg')}resizeMode="cover">
+          <Text style={{fontWeight:'bold',marginLeft:60,marginTop:30,fontSize:25,color:'orange'}}>50% Off</Text>
+          <Text style={{fontWeight:'bold',marginLeft:30,fontSize:20}}>Your First Purchase</Text>
+    </ImageBackground>
     </View>
 
     </ScrollView>
