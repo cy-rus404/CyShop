@@ -210,7 +210,10 @@ const HomeScreen = () => {
         We saved these for you
       </Text>
       <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
-        <TouchableOpacity onPress={()=> setModalVisible(true)} style={{ width: 150, height: 150, marginLeft: 20 }}>
+        <TouchableOpacity
+          onPress={() => setModalVisible(true)}
+          style={{ width: 150, height: 150, marginLeft: 20 }}
+        >
           <Image
             style={{
               width: 170,
@@ -221,18 +224,16 @@ const HomeScreen = () => {
             source={require("./assets/airfoce.png")}
           />
           <Modal
-        animationType="slide"
-        transparent={false}
-        visible={modalVisible}
-        onRequestClose={() => setModalVisible(true)} // Close modal on back button press
-      >
-        <TouchableOpacity
-              
-              onPress={() => setModalVisible(false)}
-            >
-              <Text style={{marginTop:50}}>Close</Text></TouchableOpacity>
-      </Modal>
-      
+            animationType="slide"
+            transparent={false}
+            visible={modalVisible}
+            onRequestClose={() => setModalVisible(true)} // Close modal on back button press
+          >
+            <TouchableOpacity onPress={() => setModalVisible(false)}>
+              <Text style={{ marginTop: 50 }}>Close</Text>
+            </TouchableOpacity>
+          </Modal>
+
           <Text
             style={{
               fontSize: 20,
@@ -247,106 +248,10 @@ const HomeScreen = () => {
             $129.99
           </Text>
         </TouchableOpacity>
-        <Pressable style={{ width: 150, height: 150, marginRight: 20 }}>
-          <Image
-            style={{
-              width: 170,
-              height: 80,
-              alignSelf: "center",
-              marginTop: 30,
-            }}
-            source={require("./assets/airmax.png")}
-          />
-          <Text
-            style={{
-              fontSize: 20,
-              fontWeight: "bold",
-              textAlign: "center",
-              marginTop: 5,
-            }}
-          >
-            Nike AirMax
-          </Text>
-          <Text style={{ textAlign: "center", fontWeight: "bold" }}>
-            $229.99
-          </Text>
-        </Pressable>
-      </View>
-      <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
-        <Pressable style={{ width: 150, height: 150, marginLeft: 20 }}>
-          <Image
-            style={{
-              width: 170,
-              height: 80,
-              alignSelf: "center",
-              marginTop: 30,
-            }}
-            source={require("./assets/air.png")}
-          />
-          <Text
-            style={{
-              fontSize: 20,
-              fontWeight: "bold",
-              textAlign: "center",
-              marginTop: 5,
-            }}
-          >
-            Nike Lowdunks
-          </Text>
-          <Text style={{ textAlign: "center", fontWeight: "bold" }}>
-            $449.99
-          </Text>
-        </Pressable>
-        <Pressable style={{ width: 150, height: 150, marginRight: 20 }}>
-          <Image
-            style={{
-              width: 170,
-              height: 80,
-              alignSelf: "center",
-              marginTop: 30,
-            }}
-            source={require("./assets/gazelle.png")}
-          />
-          <Text
-            style={{
-              fontSize: 20,
-              fontWeight: "bold",
-              textAlign: "center",
-              marginTop: 5,
-            }}
-          >
-            Nike Gazelle
-          </Text>
-          <Text style={{ textAlign: "center", fontWeight: "bold" }}>
-            $159.99
-          </Text>
-        </Pressable>
-      </View>
-
-      <View style={{ marginTop: 20 }}>
-        <ImageBackground
-          style={{ width: "100%", height: 120 }}
-          source={require("./assets/banner.jpg")}
-          resizeMode="cover"
+        <TouchableOpacity
+          onPress={() => setModalVisible(true)}
+          style={{ width: 150, height: 150, marginRight: 20 }}
         >
-          <Text
-            style={{
-              fontWeight: "bold",
-              marginLeft: 60,
-              marginTop: 30,
-              fontSize: 25,
-              color: "orange",
-            }}
-          >
-            50% Off
-          </Text>
-          <Text style={{ fontWeight: "bold", marginLeft: 30, fontSize: 20 }}>
-            Your First Purchase
-          </Text>
-        </ImageBackground>
-      </View>
-      <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
-        <Pressable style={{ width: 150, height: 150, marginLeft: 20 }}>
           <Image
             style={{
               width: 170,
@@ -356,6 +261,17 @@ const HomeScreen = () => {
             }}
             source={require("./assets/airfoce.png")}
           />
+          <Modal
+            animationType="slide"
+            transparent={false}
+            visible={modalVisible}
+            onRequestClose={() => setModalVisible(true)} // Close modal on back button press
+          >
+            <TouchableOpacity onPress={() => setModalVisible(false)}>
+              <Text style={{ marginTop: 50 }}>Close</Text>
+            </TouchableOpacity>
+          </Modal>
+
           <Text
             style={{
               fontSize: 20,
@@ -369,181 +285,8 @@ const HomeScreen = () => {
           <Text style={{ textAlign: "center", fontWeight: "bold" }}>
             $129.99
           </Text>
-        </Pressable>
-        <Pressable style={{ width: 150, height: 150, marginRight: 20 }}>
-          <Image
-            style={{
-              width: 170,
-              height: 80,
-              alignSelf: "center",
-              marginTop: 30,
-            }}
-            source={require("./assets/airmax.png")}
-          />
-          <Text
-            style={{
-              fontSize: 20,
-              fontWeight: "bold",
-              textAlign: "center",
-              marginTop: 5,
-            }}
-          >
-            Nike AirMax
-          </Text>
-          <Text style={{ textAlign: "center", fontWeight: "bold" }}>
-            $229.99
-          </Text>
-        </Pressable>
-      </View>
-      <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
-        <Pressable style={{ width: 150, height: 150, marginLeft: 20 }}>
-          <Image
-            style={{
-              width: 170,
-              height: 80,
-              alignSelf: "center",
-              marginTop: 30,
-            }}
-            source={require("./assets/airfoce.png")}
-          />
-          <Text
-            style={{
-              fontSize: 20,
-              fontWeight: "bold",
-              textAlign: "center",
-              marginTop: 5,
-            }}
-          >
-            Nike Airforce
-          </Text>
-          <Text style={{ textAlign: "center", fontWeight: "bold" }}>
-            $129.99
-          </Text>
-        </Pressable>
-        <Pressable style={{ width: 150, height: 150, marginRight: 20 }}>
-          <Image
-            style={{
-              width: 170,
-              height: 80,
-              alignSelf: "center",
-              marginTop: 30,
-            }}
-            source={require("./assets/airmax.png")}
-          />
-          <Text
-            style={{
-              fontSize: 20,
-              fontWeight: "bold",
-              textAlign: "center",
-              marginTop: 5,
-            }}
-          >
-            Nike AirMax
-          </Text>
-          <Text style={{ textAlign: "center", fontWeight: "bold" }}>
-            $229.99
-          </Text>
-        </Pressable>
-      </View>
-      <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
-        <Pressable style={{ width: 150, height: 150, marginLeft: 20 }}>
-          <Image
-            style={{
-              width: 170,
-              height: 80,
-              alignSelf: "center",
-              marginTop: 30,
-            }}
-            source={require("./assets/airfoce.png")}
-          />
-          <Text
-            style={{
-              fontSize: 20,
-              fontWeight: "bold",
-              textAlign: "center",
-              marginTop: 5,
-            }}
-          >
-            Nike Airforce
-          </Text>
-          <Text style={{ textAlign: "center", fontWeight: "bold" }}>
-            $129.99
-          </Text>
-        </Pressable>
-        <Pressable style={{ width: 150, height: 150, marginRight: 20 }}>
-          <Image
-            style={{
-              width: 170,
-              height: 80,
-              alignSelf: "center",
-              marginTop: 30,
-            }}
-            source={require("./assets/airfoce.png")}
-          />
-          <Text
-            style={{
-              fontSize: 20,
-              fontWeight: "bold",
-              textAlign: "center",
-              marginTop: 5,
-            }}
-          >
-            Nike AirMax
-          </Text>
-          <Text style={{ textAlign: "center", fontWeight: "bold" }}>
-            $229.99
-          </Text>
-        </Pressable>
-      </View>
-      <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
-        <Pressable style={{ width: 150, height: 150, marginLeft: 20 }}>
-          <Image
-            style={{
-              width: 170,
-              height: 130,
-              alignSelf: "center",
-              marginTop: 30,
-            }}
-            source={require("./assets/superstar.png")}
-          />
-          <Text
-            style={{
-              fontSize: 20,
-              fontWeight: "bold",
-              textAlign: "center",
-              marginTop: 5,
-            }}
-          >
-            Nike Airforce
-          </Text>
-          <Text style={{ textAlign: "center", fontWeight: "bold" }}>
-            $129.99
-          </Text>
-        </Pressable>
-        <Pressable style={{ width: 150, height: 150, marginRight: 20 }}>
-          <Image
-            style={{
-              width: 170,
-              height: 130,
-              alignSelf: "center",
-              marginTop: 30,
-            }}
-            source={require("./assets/stan.png")}
-          />
-          <Text
-            style={{
-              fontSize: 20,
-              fontWeight: "bold",
-              textAlign: "center",
-              marginTop: 5,
-            }}
-          >
-            Nike AirMax
-          </Text>
-          <Text style={{ textAlign: "center", fontWeight: "bold" }}>
-            $229.99
-          </Text>
-        </Pressable>
+        </TouchableOpacity>
+
       </View>
     </ScrollView>
   );
