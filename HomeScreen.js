@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Pressable, Modal, TouchableOpacity } from "react-native";
+import { Pressable, Modal, TouchableOpacity, SafeAreaView } from "react-native";
 import {
   ActivityIndicator,
   KeyboardAvoidingView,
@@ -7,6 +7,7 @@ import {
   TextInput,
 } from "react-native";
 import { Image, ImageBackground, Text, View } from "react-native";
+import Video from "react-native-video";
 
 const image = require("./assets/cyshop.jpg");
 
@@ -210,7 +211,7 @@ const HomeScreen = () => {
         We saved these for you
       </Text>
       <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
-        <TouchableOpacity
+        <Pressable
           onPress={() => setModalVisible(true)}
           style={{ width: 150, height: 150, marginLeft: 20 }}
         >
@@ -229,9 +230,43 @@ const HomeScreen = () => {
             visible={modalVisible}
             onRequestClose={() => setModalVisible(true)} // Close modal on back button press
           >
-            <TouchableOpacity onPress={() => setModalVisible(false)}>
-              <Text style={{ marginTop: 50 }}>Close</Text>
-            </TouchableOpacity>
+            <View style={{backgroundColor:'beige', flex:1}}>
+            <Pressable onPress={() => setModalVisible(false)}>
+              <SafeAreaView>
+              <Text style={{ margin:20,fontWeight:'bold',fontSize:15 }}>Close</Text>
+              </SafeAreaView>
+            </Pressable>
+            <Image style={{width:350,height:155,marginTop:30}} source={require('./assets/airfoce.png')}/>
+            <Text style={{textAlign:'center',margin:20,fontSize:30,fontWeight:'bold'}}>Nike Air Force 1</Text>
+            <Text style={{margin:20,fontWeight:'bold'}}>Sizes</Text>
+            <View style={{flexDirection:'row'}}>
+                  <View style={{height:50,width:150,borderColor:'#000', borderWidth:1,marginLeft:40,}}> 
+                <Text style={{textAlign:'center',fontSize:30,fontWeight:'bold',marginTop:5}}>Large</Text>
+                </View>
+                <View style={{height:50,width:150,borderColor:'#000', borderWidth:1,marginLeft:20,}}> 
+                <Text style={{textAlign:'center',fontSize:20,fontWeight:'bold',marginTop:10}}>Medium</Text>
+                </View>
+                
+            </View>
+            <View style={{flexDirection:'row',marginTop:30}}>
+                  <View style={{height:50,width:150,borderColor:'#000', borderWidth:1,marginLeft:40,}}> 
+                <Text style={{textAlign:'center',fontSize:15,fontWeight:'bold',marginTop:15}}>Small</Text>
+                </View>
+                <View style={{height:50,width:150,borderColor:'#000', borderWidth:1,marginLeft:20,}}> 
+                <Text style={{textAlign:'center',fontSize:25,fontWeight:'bold',marginTop:8}}>Medium</Text>
+                </View>
+                
+            </View>
+            <View style={{flexDirection:'row',marginTop:30}}>
+                  <View style={{height:50,width:150,borderColor:'#000', borderWidth:1,marginLeft:40,}}> 
+                <Text style={{textAlign:'center',fontSize:30,fontWeight:'bold',marginTop:5}}>Large</Text>
+                </View>
+                <View style={{height:50,width:150,borderColor:'#000', borderWidth:1,marginLeft:20,}}> 
+                <Text style={{textAlign:'center',fontSize:25,fontWeight:'bold',marginTop:8}}>Medium</Text>
+                </View>
+                
+            </View>
+            </View>
           </Modal>
 
           <Text
@@ -247,45 +282,7 @@ const HomeScreen = () => {
           <Text style={{ textAlign: "center", fontWeight: "bold" }}>
             $129.99
           </Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          onPress={() => setModalVisible(true)}
-          style={{ width: 150, height: 150, marginRight: 20 }}
-        >
-          <Image
-            style={{
-              width: 170,
-              height: 80,
-              alignSelf: "center",
-              marginTop: 30,
-            }}
-            source={require("./assets/airfoce.png")}
-          />
-          <Modal
-            animationType="slide"
-            transparent={false}
-            visible={modalVisible}
-            onRequestClose={() => setModalVisible(true)} // Close modal on back button press
-          >
-            <TouchableOpacity onPress={() => setModalVisible(false)}>
-              <Text style={{ marginTop: 50 }}>Close</Text>
-            </TouchableOpacity>
-          </Modal>
-
-          <Text
-            style={{
-              fontSize: 20,
-              fontWeight: "bold",
-              textAlign: "center",
-              marginTop: 5,
-            }}
-          >
-            Nike Airforce
-          </Text>
-          <Text style={{ textAlign: "center", fontWeight: "bold" }}>
-            $129.99
-          </Text>
-        </TouchableOpacity>
+        </Pressable>
 
       </View>
     </ScrollView>
