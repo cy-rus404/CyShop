@@ -25,7 +25,7 @@ const HomeScreen = () => {
       {loading && (
         <ActivityIndicator
           style={{ position: "absolute", alignSelf: "center", marginTop: 50 }}
-          size="large"
+          size="small"
           color="#0000ff"
         />
       )}
@@ -266,7 +266,17 @@ const HomeScreen = () => {
                 </View>
                 
             </View>
+            <View style={{flexDirection:'row',marginTop:180,marginLeft:40}}>
+                <TouchableOpacity style={{width:60,height:50,backgroundColor:'beige',borderWidth:2,borderRadius:10}}>
+                  <Image style={{width:30,height:30,alignSelf:'center',marginTop:8}} source={require('./assets/shopping-cart.png')}/>
+                </TouchableOpacity>
+                <TouchableOpacity style={{width:230,height:50,backgroundColor:'beige',borderWidth:2,borderRadius:10,marginLeft:10}}>
+                  <Text style={{textAlign:'center',fontSize:25,marginTop:5}}>Add To Cart</Text>
+                </TouchableOpacity>
+
             </View>
+            </View>
+            
           </Modal>
 
           <Text
