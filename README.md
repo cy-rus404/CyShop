@@ -22,4 +22,4 @@ A simple mobile application built with React Native to browse, search, and purch
 1. **Clone the repository**
    ```bash
    git clone https://github.com/cy-rus404/CyShop.git
-  Feel free to submit issues or pull requests for any improvements or new features!
+ ERROR ENCOUNTED
